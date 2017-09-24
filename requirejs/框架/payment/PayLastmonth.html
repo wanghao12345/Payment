@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>燃气账单明细</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-itunes-app" content="app-id=921839681">
+		<link rel="stylesheet" type="text/css" href="../static/css/com.css" />
+	</head>
+
+	<body>
+		<div class="com-content">
+			
+
+			<!--content-start-->
+			<script type="text/html" id="payinfo">
+				<div class="com-content-area">
+					<div class="data">
+						<ul>
+							<li>
+								<label>日期:</label>
+								<span>{{data.month}}</span> </li>
+							<li>
+								<label>金额:</label>
+								<span><strong class="C_Blue">￥{{data.money}}</strong></span>
+							</li>
+							<li>
+								<label>出账机构:</label>
+								<span><strong class="C_Blue">{{data.company}}</strong></span>
+							</li>
+							<li>
+								<label>缴费状态:</label>
+								{{if data.paystatus==1}}
+								<span><strong class="C_Blue">已缴费</strong></span> {{else}}
+								<span><strong class="C_Blue">未缴费</strong></span> {{/if}}
+							</li>
+							{{if data.paystatus==1}}
+							<li>
+								<label>缴费时间:</label>
+								<span>{{data.paytime}}</span>
+							</li>
+							{{/if}}
+						</ul>
+					</div>
+					<div class="login">
+						<ul>
+							{{if data.tablelist!=null && data.tablelist.length>0}}
+							<li>
+								<table class="wy_fei_table">
+									<tr style="border:none">
+										<th width="25%">表号</th>
+										<th width="25%">上期示数</th>
+										<th width="25%">本期示数</th>
+										<th width="25%">本期用量</th>
+									</tr>
+									{{each data.tablelist as value i}}
+									<tr width="100%">
+										<td width="25%">{{value.number}}</td>
+										<td width="25%">{{value.predisplay}}</td>
+										<td width="25%">{{value.nextdisplay}}</td>
+										<td width="25%" style="border-right:0">{{value.quantity}}</td>
+									</tr>
+									{{/each}}
+								</table>
+							</li>
+							{{/if}} {{if data.paystatus==1}}
+							<li> <a class="addCart mb12" href="../index/PayType.html" style="color:#fff">返 回</a>
+							</li>
+							{{else}}
+							<li> <a class="addCart mb12 J_addCart" data-paynum="{{data.barcode}}" style="color:#fff">缴费</a>
+							</li>
+							{{/if}}
+						</ul>
+					</div>
+				</div>
+			</script>
+			<!--content-end-->
+
+			<!-- 页脚start --->
+			<div class="com-footer-area"></div>
+			<!-- 页脚end  ---->
+
+		</div>
+		<script type="text/javascript" src="../static/js/require.js"></script>
+		<script>
+			require(["../static/js/config"], function() {
+				require(['controller/PayLastmonth']);
+			})
+		</script>
+	</body>
+
+</html>

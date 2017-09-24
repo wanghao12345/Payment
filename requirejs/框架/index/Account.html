@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>账户管理</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-itunes-app" content="app-id=921839681">
+		<link rel="stylesheet" type="text/css" href="../static/css/com.css" />
+	</head>
+
+	<body>
+		<div class="com-content">
+			<!--content-start-->
+			<div class="com-content-area">
+				<div class="Personal">
+					<ul>
+						<li>
+							<a href="../yue/yue.html?type=1"><i class="iocm"></i><span>水表余额查询</span></a>
+						</li>
+						<li><a href="../Recharge/Recharge.html?type=1">水表账户充值<i class="iocm"></i></a>
+						</li>
+						<li><a href="../yue/yue.html?type=2">燃气表余额查询<i class="iocm"></i></a>
+						</li>
+						<li><a href="../Recharge/Recharge.html?type=2">燃气表帐号充值<i class="iocm"></i></a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+
+			<!--content-end-->
+
+			<!-- 页脚start --->
+			<div class="com-footer-area"></div>
+			<!-- 页脚end  ---->
+
+		</div>
+		<script type="text/javascript" src="../static/js/require.js"></script>
+		<script>
+			require(["../static/js/config"], function() {
+				require(['controller/index']);
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>我的燃气</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="applicable-device" content="mobile">
+		<link rel="stylesheet" type="text/css" href="../static/css/com.css" />
+	</head>
+
+	<body>
+		<div class="com-content">
+			
+
+			<!--content-start-->
+
+			<div class="com-content-area">
+				<div class="login" style="display: none;">
+					<ul>
+						<li>
+							<div class="Binding_s"><i class="iocm"></i><span class="cBinding_stit">您尚未绑定缴费户号信息</span>
+							</div>
+						</li>
+						<li><a class="addCart mb12 J_addCart" data-ajax="false"  style="color: #fff">去绑定</a>
+						</li>
+						</ul>
+				</div>
+				
+				<div class="data">
+					<ul>
+						<script type="text/html" id="feiyong">
+							<li style=" padding: 8px 22px 8px 50px;">
+								<label style=" width: 46px;">户名:</label>
+								<span>{{data.account}}</span> </li>
+							<li style=" padding: 8px 22px 8px 50px;">
+								<label style=" width: 46px;">户号:</label>
+								<span>{{data.idcard}}</span>
+								<span class="switcher" style="float: right;">
+        						<input type="checkbox" class="ck_cancle" id="switcher1" checked="checked" data-num="{{data.idcard}}"/>
+        						<label for="switcher1"  data-off="OFF" data-on="ON" style="width: 56px;height: 20px;text-align: left;padding:0px;position: relative;"></label>
+    						</span>
+							</li>
+							{{each data.tablelist as value i}}
+							<li style=" padding: 8px 22px 8px 50px;">
+								<label style=" width: 46px;">表号:</label>
+								<span>{{value.number}}</span>
+								
+								<span class="switcher" style="float: right;">
+								{{if value.valvestatus==1}}
+        						<input type="checkbox" class="ck_num" id="switcher{{2+i}}" checked="checked" data-num="{{value.number}}"/>
+        						{{else}}
+        							<input type="checkbox" class="ck_num" id="switcher{{2+i}}" data-num="{{value.number}}"/>
+        						{{/if}}
+        						<label for="switcher{{2+i}}" data-off="OFF" data-on="ON" style="width: 56px;height: 20px;text-align: left;padding:0px;position: relative;"></label>
+    						</span>
+							</li>
+							{{/each}}
+							<li style=" padding: 8px 22px 8px 50px;">
+								<label style=" width: 46px;">地址:</label>
+								<span>{{data.address}}</span> </li>
+						</script>
+						<li style="padding: 8px 22px 8px 22px;"><a class="addCart mb12" data-ajax="false" href="Binding_s.html" style="color: #fff;">去缴费</a>
+					</ul>
+				</div>
+			</div>
+
+			<!--content-end-->
+
+			<!-- 页脚start --->
+			<div class="com-footer-area"></div>
+			<!-- 页脚end  ---->
+
+		</div>
+		<script type="text/javascript" src="../static/js/require.js"></script>
+		<script>
+			require(["../static/js/config"], function() {
+				require(['controller/Data_Ranqi']);
+			})
+		</script>
+	</body>
+
+</html>

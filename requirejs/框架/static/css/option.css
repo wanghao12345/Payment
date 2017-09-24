@@ -1,0 +1,35 @@
+
+
+
+
+
+/*选择号*/
+.RadioClass{display: none;}
+.RadioLabelClass{background:#fff url(../images/yes.png) no-repeat;padding-top: 3px;margin: 5px;height: 38px;width: 28px;display: block;float: left; font-size:0; text-indent:-99999px;}
+.RadioSelected{background:#fff url(../images/no.png) no-repeat;}
+
+
+/*开关*/
+.op {float: right; height: 35px;}
+.ui-page-theme-a .ui-btn.ui-btn-active, html .ui-bar-a .ui-btn.ui-btn-active, html .ui-body-a .ui-btn.ui-btn-active, html body .ui-group-theme-a .ui-btn.ui-btn-active, html head + body .ui-btn.ui-btn-a.ui-btn-active, .ui-page-theme-a .ui-checkbox-on:after, html .ui-bar-a .ui-checkbox-on:after, html .ui-body-a .ui-checkbox-on:after, html body .ui-group-theme-a .ui-checkbox-on:after, .ui-btn.ui-checkbox-on.ui-btn-a:after, .ui-page-theme-a .ui-flipswitch-active, html .ui-bar-a .ui-flipswitch-active, html .ui-body-a .ui-flipswitch-active, html body .ui-group-theme-a .ui-flipswitch-active, html body .ui-flipswitch.ui-bar-a.ui-flipswitch-active, .ui-page-theme-a .ui-slider-track .ui-btn-active, html .ui-bar-a .ui-slider-track .ui-btn-active, html .ui-body-a .ui-slider-track .ui-btn-active, html body .ui-group-theme-a .ui-slider-track .ui-btn-active, html body div.ui-slider-track.ui-body-a .ui-btn-active { background-color: #003377;color: #fff;}
+.ui-slider-switch .ui-slider-label-b {right: 0;text-indent: 1.5em;z-index: 0;}
+.ui-slider-track .ui-slider-bg, .ui-slider-switch .ui-slider-label, .ui-slider-switch .ui-slider-inneroffset, .ui-slider-handle { border-radius: 25px;}
+.ui-bar-a, .ui-page-theme-a .ui-bar-inherit, html .ui-bar-a .ui-bar-inherit, html .ui-body-a .ui-bar-inherit, html body .ui-group-theme-a .ui-bar-inherit {background:#ccc;border:none;color: #333;}
+.ui-btn-corner-all, .ui-btn.ui-corner-all, .ui-slider-track.ui-corner-all, .ui-flipswitch.ui-corner-all, .ui-li-count {border-radius: 25px;}
+.ui-page-theme-a .ui-btn, html .ui-bar-a .ui-btn, html .ui-body-a .ui-btn, html body .ui-group-theme-a .ui-btn, html head + body .ui-btn.ui-btn-a, .ui-page-theme-a .ui-btn:visited, html .ui-bar-a .ui-btn:visited, html .ui-body-a .ui-btn:visited, html body .ui-group-theme-a .ui-btn:visited, html head + body .ui-btn.ui-btn-a:visited {background: #f6f6f6;border-color: #ddd;color: #333;}
+.ui-nojs {clip: rect(1px, 1px, 1px, 1px);height: 1px;overflow: hidden;position: absolute !important;width: 1px;}
+.ui-slider-track { border-style: solid; border-width: 1px; height: 15px;margin: 0 15px 0 68px;overflow: visible;position: relative;top: 6px;}
+.ui-slider-track.ui-mini {height: 12px; top: 8px;}
+.ui-slider-track .ui-slider-bg {height: 100%;}
+.ui-slider-track .ui-btn.ui-slider-handle {height: 28px; margin: -15px 0 0 -15px;outline: 0 none;padding: 0;position: absolute;top: 50%;width: 28px;z-index: 1;}
+.ui-slider-track.ui-mini .ui-slider-handle {height: 14px;margin: -8px 0 0 -8px;width: 14px;}
+select.ui-slider-switch {clip: rect(1px, 1px, 1px, 1px);height: 1px;overflow: hidden; position: absolute !important;width: 1px;}
+div.ui-slider-switch {display: inline-block; height: 32px;top: 0;width: 5.8em;}
+div.ui-slider-switch.ui-mini {height: 29px;top: 0;}
+.ui-slider-inneroffset { margin: 0 16px;position: relative;z-index: 1;}
+.ui-slider-switch.ui-mini .ui-slider-inneroffset {margin: 0 15px 0 14px;}
+.ui-slider-switch .ui-btn.ui-slider-handle { margin: 1px 0 0 -15px;}
+.ui-slider-switch.ui-mini .ui-slider-handle {height: 27px;margin: 1px 0 0 -13px;padding: 0;width: 27px;}
+.ui-slider-switch .ui-slider-label {cursor: pointer;font-size: 16px;line-height: 2;min-height: 100%;overflow: hidden;position: absolute;text-align: center; top: 0;white-space: nowrap;width: 100%;}
+.ui-slider-switch.ui-mini .ui-slider-label {font-size: 14px;}
+.ui-slider-switch .ui-slider-label-a {left: 0;text-indent: -1.5em;z-index: 1;}

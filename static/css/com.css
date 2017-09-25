@@ -1,0 +1,25 @@
+html,body{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	background-image: -webkit-gradient(linear,left top,left bottom,
+		color-stop(0,#1373ae),color-stop(1,#5ea7bb));
+}
+/* 登录*/
+.com-content{
+	width: 100%;
+	height: 20rem;
+}
+.com-content-area{
+	width: 100%;
+	height: 100%;
+}
+.com-content-area .logo{
+	width: 100%;
+	height: 7rem;
+	padding: 10px;
+}
+.com-content-area .logo img{
+	width: 50%;
+}

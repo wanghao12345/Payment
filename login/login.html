@@ -3,8 +3,57 @@
 <head>
 	<meta charset="UTF-8">
 	<title>登录</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+		<meta name="format-detection" content="email=no" />
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-touch-fullscreen" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="applicable-device" content="mobile">
+		<meta name="apple-itunes-app" content="app-id=921839681">
+		<link rel="stylesheet" href="../static/css/reset.css">
+		<link rel="stylesheet" href="../static/css/com.css">
+		
 </head>
 <body>
-	
+	<div class="com-content">
+		<div class="com-content-area">
+			<div class="logo">
+				<img src="../static/img/logo.png" alt="logo">
+			</div>
+			<div class="login">
+				<ul>
+					<li>
+						<input type="text" placeholder="密码" id="userName" value="">
+					</li>
+					<li>
+						<input type="password" placeholder="密码" id="passWord" value="">
+					</li>
+					<li>
+						<a href="#" class="addCart mb12" id="buttom" style="color: #fff">登录</a>
+					</li>
+				</ul>
+			</div>
+			<div class="register_btn"><a href="#">用户注册</a></div>
+		</div>
+	</div>
+
 </body>
+<script type="text/javascript">
+	var fun = function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function () {
+            var clientWidth = docEl.clientWidth;
+            if (!clientWidth) return;
+
+            //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
+            //可以根据实际需要修改
+            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+        };
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+	}
+	fun(document, window);
+</script>
 </html>

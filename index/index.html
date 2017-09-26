@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>个人中心</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="applicable-device" content="mobile">
+	<meta name="apple-itunes-app" content="app-id=921839681">
+	<link rel="stylesheet" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/com.css">
+	<link rel="stylesheet" type="text/css" href="../static/css/index.css" />
+</head>
+<body>
+	<div class="com-content">
+		<!--content-start-->
+		<div class="com-content-area">
+			<div class="Personal">
+				<ul>
+					<li>
+						<a href="Account.html">
+							<i class="iocm"></i>
+							<span>账户管理</span>
+						</a>
+					</li>
+					<li>
+						<a href="Center.html">
+							<i class="iocm"></i>
+							<span>安全中心</span>
+						</a>
+					</li>
+					<li>
+						<a href="PayType.html?type=1">
+							<i class="iocm"></i>
+							<span>缴水费</span>
+						</a>
+					</li>
+					<li>
+						<a href="PayType.html?type=2">
+							<i class="iocm"></i>
+							<span>缴燃气费</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../static/js/require.js"></script>
+<script type="text/javascript" src="../static/js/com/rem.js"></script>
+<script type="text/javascript">
+	require(["../static/js/config"],function(){
+		require(['controller/index']);
+	})
+</script>
+</html>

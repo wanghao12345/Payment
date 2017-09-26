@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>注册</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<meta name="format-detection" content="email=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="applicable-device" content="mobile">
+	<meta name="apple-itunes-app" content="app-id=921839681">
+	<link rel="stylesheet" href="../static/css/reset.css">
+	<link rel="stylesheet" href="../static/css/com.css">
+	<link rel="stylesheet" href="../static/css/register.css">
+</head>
+<body>
+		<div class="com-content">
+			
+
+			<!--content-start-->
+
+			<div class="com-content-area">
+				<div class="logo">
+					<img src="../static/images/logo.png" />
+				</div>
+				<div class="login">
+					<ul>
+						<li>
+							<input type="text" placeholder="账号" id="userName" value="" >
+						</li>
+						<li>
+							<input type="password" placeholder="密码" id="passWord" value="" >
+						</li>
+						<li>
+							<input type="password" placeholder="确认密码" id="repassWord" value="" >
+						</li>
+						<li>
+							<input type="text" placeholder="手机号" id="phone" value="">
+						</li>
+						<li>
+							<input type="text" placeholder="输入验证码" id="code" style=" width:9.5rem;position: absolute;left: 1rem;top: 0" value="" maxlength="11">
+							<strong>
+	                			<input name="" style="width:4rem;position: absolute;right: 1rem;top: 0;background-color: #d5d5d5;color: #333" id="fa_code"  type="button"  value="获取验证码">
+	               			 </strong> 
+	            		</li>
+						<li>
+							<a class="addCart mb12" href="#" style="color: #fff" id="buttom">注册</a>
+							<a class="fbbon"  href="../login/login.html" style="color: #fff">已有账户</a> 
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+</body>
+<script type="text/javascript" src="../static/js/require.js"></script>
+<script type="text/javascript" src="../static/js/com/rem.js"></script>
+<script type="text/javascript">
+	require(["../static/js/config"],function(){
+		require(['controller/register']);
+	})
+</script>
+</html>

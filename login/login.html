@@ -12,18 +12,19 @@
 		<meta name="apple-itunes-app" content="app-id=921839681">
 		<link rel="stylesheet" href="../static/css/reset.css">
 		<link rel="stylesheet" href="../static/css/com.css">
+		<link rel="stylesheet" href="../static/css/login.css">
 		
 </head>
 <body>
 	<div class="com-content">
 		<div class="com-content-area">
 			<div class="logo">
-				<img src="../static/img/logo.png" alt="logo">
+				<img src="../static/images/logo.png" alt="logo">
 			</div>
 			<div class="login">
 				<ul>
 					<li>
-						<input type="text" placeholder="密码" id="userName" value="">
+						<input type="text" placeholder="账号" id="userName" value="">
 					</li>
 					<li>
 						<input type="password" placeholder="密码" id="passWord" value="">
@@ -33,27 +34,19 @@
 					</li>
 				</ul>
 			</div>
-			<div class="register_btn"><a href="#">用户注册</a></div>
+			<div class="register_btn">
+				<a href="../register/register.html" id="register">用户注册</a>
+			</div>
 		</div>
 	</div>
 
 </body>
+<script type="text/javascript" src="../static/js/require.js"></script>
+<script type="text/javascript" src="../static/js/com/rem.js"></script>
 <script type="text/javascript">
-	var fun = function (doc, win) {
-    var docEl = doc.documentElement,
-        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-        recalc = function () {
-            var clientWidth = docEl.clientWidth;
-            if (!clientWidth) return;
-
-            //这里是假设在640px宽度设计稿的情况下，1rem = 20px；
-            //可以根据实际需要修改
-            docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
-        };
-    if (!doc.addEventListener) return;
-    win.addEventListener(resizeEvt, recalc, false);
-    doc.addEventListener('DOMContentLoaded', recalc, false);
-	}
-	fun(document, window);
+	require(["../static/js/config"],function(){
+		require(['controller/login']);
+	})
+ 
 </script>
 </html>

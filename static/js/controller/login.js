@@ -1,15 +1,17 @@
-require(['lib/common'], function($) {
+require(['lib/common'],function($){
+	
 	var info = {
 		returnurl:$.url.getParam('returnurl'),
-		username: '',
-		password: ''
+		username:'',
+		password:''
 	}
-	$("#buttom").on("click", function() {
+	$("#buttom").on("click",function(){
 		info.username = $("#userName").val();
 		info.password = $("#passWord").val();
-		$.log(info.username, info.password);
+
+		$.log(info.username,info.password);
 		if ($.isNull(info.username)) {
-			$.alert("亲~请输入用户名:-)");
+			$.alert("亲~请输入用户名");
 			return;
 		}
 		if ($.isNull(info.password)) {
@@ -24,13 +26,14 @@ require(['lib/common'], function($) {
 			$.alert("亲~密码为6-18位字母或数字组合，请确认:-)");
 			return;
 		}*/
+
 		var data = {
 			dataType:'jsonp',
-			url: 'login?username=' + info.username + '&password=' + info.password
+			url:'login?username='+info.username+'&password'+info.password
 		}
-		window.location.href = "../index/index.html";
 		$.loding(true);
-		$.xsr(data, function(data) {
+		window.location.href = "../index/index.html";
+		$.xsr(data,function(data){
 			$.loding(false);
 			if (data.status == 100) {
 				var time = 60 * 60 * 24 * 365; //设置cookie时间为1年
@@ -46,9 +49,13 @@ require(['lib/common'], function($) {
 					}
 				}
 			} else {
-//				$.alert("亲~用户名或密码不正确,请确认后再登录");
 				$.errorlog(data.status);
 			}
 		});
+
+
 	});
+
+
+
 })

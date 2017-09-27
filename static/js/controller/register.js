@@ -8,7 +8,7 @@ require(['lib/common'],function($){
 		phone:'',
 		code:''
 	}
-	$("#fa_code").on("click",function(){
+	/*$("#fa_code").on("click",function(){
 		info.phone = $("#phone").val();
 		if ($.isNull(info.phone)) {
 			$.alert("亲~请输入手机号码");
@@ -48,7 +48,7 @@ require(['lib/common'],function($){
 				$.errorlog(data.status);
 			}
 		});
-	});
+	});*/
 
 	$("#buttom").on("click", function() {
 		info.username = $("#userName").val();
@@ -65,7 +65,7 @@ require(['lib/common'],function($){
 			$.alert("亲~请输入密码");
 			return;
 		}
-		if ($.isNull(info.phone)) {
+		/*if ($.isNull(info.phone)) {
 			$.alert("亲~请输入手机号码");
 			return;
 		}
@@ -88,8 +88,8 @@ require(['lib/common'],function($){
 		if (info.password != info.repassword) {
 			$.alert("亲~两次输入的密码不一致,请从新输入");
 			return;
-		}
-		var data = {
+		}*/
+		/*var data = {
 			type: 'post',
 			url: 'register?username=' + info.username + '&password=' + info.password + "&mobile=" + info.phone + "&verifycode=" + info.code
 		}
@@ -104,6 +104,27 @@ require(['lib/common'],function($){
 			} else {
 				$.errorlog(data.status);
 			}
-		});
+		});*/
+		//存到cookie
+
+		var thcookie = {
+			th_userName:$.cookie.get("th_userName"),
+			th_password:$.cookie.get("th_password")
+		}
+		if ($.isNull(thcookie.th_userName)) {
+			var time = 60 * 60 * 24 * 365;
+			$.cookie.add('th_userName',info.username,'/',time);
+			$.cookie.add('th_password',info.password,'/',time);
+		} else {
+			$.alert("亲~此账号已经被注册");
+			return;
+
+		}
+
+
+
+
+
+
 	});
 })

@@ -27,7 +27,7 @@ require(['lib/common'],function($){
 			return;
 		}*/
 
-		var data = {
+		/*var data = {
 			dataType:'jsonp',
 			url:'login?username='+info.username+'&password'+info.password
 		}
@@ -51,7 +51,18 @@ require(['lib/common'],function($){
 			} else {
 				$.errorlog(data.status);
 			}
-		});
+		});*/
+		var thcookie = {
+			th_userName:$.cookie.get("th_userName"),
+			th_password:$.cookie.get("th_password")
+		}
+
+		if (!$.isNull(thcookie.th_userName)&&!$.isNull(thcookie.th_password)) {
+			window.location.href = "../index/index.html";
+		} else {
+			$.alert("亲~该账号还没有注册");
+		}
+
 
 
 	});

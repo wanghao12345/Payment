@@ -9,11 +9,11 @@
 	height: 7rem;
 	float: left;
 	box-sizing: border-box;
-	border-bottom: 1px solid white;
+	border-bottom: 1px solid #4b9aca;
 	padding: 1rem 0;
 }
 .Personal ul li:nth-child(2n+1){
-	border-right: 1px solid white;
+	border-right: 1px solid #4b9aca;
 }
 .Personal ul li a{
 	display: block;
@@ -23,12 +23,25 @@
 	text-align: center;
 }
 .Personal ul li a i{
-    width: 4rem;
-    height: 4rem;
+    width: 3.6rem;
+    height: 3.6rem;
     display: block;
     background-image: url(../images/iocm.png);
     background-repeat: no-repeat;
-    background-position: 45% 50%;
+    background-position: 0% 0%;
+    background-size: 3.6rem;
+    margin-left: 2.2rem;
 }
-
-
+.Personal ul li a span{
+	font-size: 0.75rem;
+	color: #ffffff;
+}
+.Personal ul li:nth-child(2) a i{
+	background-position: 0% 17%;
+}
+.Personal ul li:nth-child(3) a i{
+	background-position: 0% 33.7%;
+}
+.Personal ul li:nth-child(4) a i{
+	background-position: 0% 50.7%;
+}
